@@ -47,13 +47,9 @@ public class EmployeeService {
 	                .map(employees -> {
 	                    employees.setId(newEmployee.getId());
 	                    employees.setName(newEmployee.getName());
-	                   // employees.setEmpemail(newEmployee.getEmpemail());
 	                    employees.setAddress(newEmployee.getAddress());
 	                    employees.setAge(newEmployee.getAge());
-	                   // employees.setEmpGender(newEmployee.getEmpGender());
-	                    //employees.setNumber(newEmployee.getNumber());
-	                   // employees.setLocation(newEmployee.getLocation());
-	                    return employeeRepository.save(employees);
+	                  return employeeRepository.save(employees);
 	                })
 	                .orElseGet(() -> {
 	                    newEmployee.setId(empId);
